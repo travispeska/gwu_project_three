@@ -7,6 +7,24 @@
 
 ---
 
+## Installation
+
+```sh
+git clone git@github.com:travispeska/gwu_project_three.git
+cd gwu_project_three/
+pip install -r requirements.txt
+
+---
+
+## Streamlit Application Usage
+
+```sh
+cd gwu_project_three/server/
+streamlit run server.py
+Open Browser > http://localhost:8501
+
+---
+
 ## License
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
