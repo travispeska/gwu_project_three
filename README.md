@@ -5,7 +5,7 @@
 
 ## Background
 BloC2 is a malware command and control (C2) implemented via Ethereum smart contract.
-The malware operator uses a Streamlit web applciation to issue encrypted commands to the blockchain.  These commands are read by the malware clients, decrypted, and executed.  The results of the commands executed are sent to a destination specified by the malware operator.
+The malware operator uses a Streamlit web application to issue encrypted commands to the blockchain.  These commands are read by the malware clients, decrypted, and executed.  The results of the commands executed are sent to a destination specified by the malware operator.
 
 ---
 
