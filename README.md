@@ -13,6 +13,7 @@
 git clone git@github.com:travispeska/gwu_project_three.git
 cd gwu_project_three/
 pip install -r requirements.txt
+```
 
 ---
 
@@ -22,6 +23,7 @@ pip install -r requirements.txt
 cd gwu_project_three/server/
 streamlit run server.py
 Open Browser > http://localhost:8501
+```
 
 ---
 
