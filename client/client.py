@@ -101,7 +101,7 @@ def handle_command(event):
 
 def load_existing_commands(contract):
     # Process commands that already exist on the blockchain
-    event_filter = contract.events._command.createFilter(fromBlock='earliest')
+    event_filter = contract.events.Command.createFilter(fromBlock='earliest')
     events = event_filter.get_all_entries()
     for event in events:
         handle_command(event)
@@ -109,7 +109,7 @@ def load_existing_commands(contract):
 def load_new_commands(contract):
     # Poll the blockchain for new commands issued by the operator
     poll_interval = int(config['DEFAULT']['PollInterval'])
-    event_filter = contract.events._command.createFilter(fromBlock='latest')
+    event_filter = contract.events.Command.createFilter(fromBlock='latest')
     while True:
         for event in event_filter.get_new_entries():
             handle_command(event)
