@@ -17,7 +17,18 @@ pip install -r requirements.txt
 
 ---
 
-## Streamlit Application Usage
+## Smart Contract Deployment with Remix IDE
+1. Open [Remix IDE](https://remix.ethereum.org/)
+2. Click "Load From GitHub"
+3. Enter "https://raw.githubusercontent.com/travispeska/gwu_project_three/main/contracts/bloc2.sol"
+4. Click "Import"
+5. Select Compiler Version 0.5.1.7+commit.d19bba13
+6. Click "Compile bloc2.sol"
+7. Deploy to Blockchain
+
+---
+
+## BloC2 Controller Streamlit Application
 
 ```sh
 cd gwu_project_three/server/
